@@ -5,25 +5,62 @@ Consult documentation on how to utilize the following methods:
   toString()
 */
 
+
+
+// program to convert decimal to binary
 /* Base 10 to base 2 */
+
+// binary = 8 
+// decimal = 10
+
+
+let testDec = 8
+
+
 function decimalToBinary(blob) {
   // Your code here
+  let number = parseInt(blob)
+  const result = number.toString(2);
+  return `0b` + `${result}`
 }
+
+console.log(decimalToBinary(testDec));
+
+
 
 /* Base 10 to base 16 */
 function decimalToHexadecimal(blob) {
-  // Your code here
+  let number = parseInt(blob)
+  const result = number.toString(16);
+  return `0x` + `${result}`
 }
+
+
 
 /* Base 2 to base 10 */
 function binaryToDecimal(blob) {
-  // Your code here
+  // let number = blob.slice(2)
+  // return parseInt(number,2);
+  
+  return parseInt(Number(blob), 10)
+
 }
 
 /* Base 16 to base 10 */
 function hexadecimalToDecimal(blob) {
-  // Your code here
+
+  // let number = blob.slice(2)
+  // return parseInt(number,16);
+
+  // return parseInt((blob), 16)
+  return parseInt(Number(blob), 10)
+
+
 }
+
+
+
+
 
 // console.log('Decimal to binary:')
 // console.log(decimalToBinary(13))  // '0b1101'
